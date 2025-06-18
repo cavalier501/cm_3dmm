@@ -1,10 +1,31 @@
 # 3D Morphable Face Model with Continuous Semantics (cm-3dmm)
 
+## 项目简介
 本项目是论文 "3D Morphable Face Model with Continuous Semantics" 的官方实现。
 
 我们提出了一种**具有连续语义的人脸几何模型**。（"语义"指的是人脸表面不同区域间的相对位置关系属性）。模型通过隐式神经场（Implicit Neural Fields）实现，并将面部语义通过UV坐标进行参数化表示。
 
 本项目基于 [FaceScape](https://github.com/zhuhao-nju/facescape) V1.3完成UV参数化展开策略、数据集构建。
+
+
+
+### pipeline
+基于隐式神经场，将连续语义空间的UV坐标映射至几何空间。
+<p align="center">
+<img src="./imgs/cm-3dmm pipeline_ngp.jpg" alt="系统pipeline" width="80%">
+</p>
+
+### 几何重建实验
+与其他常见模型的几何重建精度对比，达到最好。
+<p align="center">
+<img src="./imgs/result.png" alt="几何重建实验" width="80%">
+</p>
+
+### 语义上采样实验
+逐渐提高语义空间（UV空间）采样密度，几何符合人脸特征、逐渐趋于连续。
+<p align="center">
+<img src="./imgs/multi_resolution_view.jpg" alt="语义上采样实验" width="80%">
+</p>
 
 ## 环境设置
 
